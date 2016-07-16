@@ -1,1 +1,1 @@
-recursive-include name_gen *.txt
+recursive-include name_gen *
