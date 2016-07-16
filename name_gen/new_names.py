@@ -29,7 +29,7 @@ def generate_name(gender, origin="anglo-saxon"):
 
 def read_names(origin, gender):
     filename = "%s.txt" % gender
-    filepath = os.path.join(os.path.dirname(__file__), origin, filename)
+    filepath = os.path.join(os.path.dirname(__file__), 'data', origin, filename)
     with open(filepath, 'r') as fin:
         names = [name.strip() for name in fin.readlines()]
     return names

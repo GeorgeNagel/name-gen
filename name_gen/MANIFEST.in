@@ -1,1 +1,2 @@
-recursive-include name_gen *.txt
+recursive-include data *.txt
+recursive-include fantasy *.txt
