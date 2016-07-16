@@ -9,4 +9,5 @@ setup(
     author_email='',
     url='https://github.com/GeorgeNagel/name-gen.git',
     packages=setuptools.find_packages(exclude=['*.tests']),
+    include_package_data=True,
 )
