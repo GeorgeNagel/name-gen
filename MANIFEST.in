@@ -1,0 +1,2 @@
+include name_gen/data/*/*.txt
+include name_gen/fantasy/*.txt
