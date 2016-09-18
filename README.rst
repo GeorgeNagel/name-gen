@@ -16,3 +16,11 @@ import name_gen
 name_gen.generate_name('female', 'irish')
 ```
 
+----
+
+Run tests
+
+```bash
+virtualenv virtualenv --python=python3
+./run_tests.sh
+```
