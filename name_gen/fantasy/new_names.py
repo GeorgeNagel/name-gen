@@ -2,12 +2,14 @@ import os
 import random
 import sys
 
+from typing import List
 
-def generate_names(name_type, number_of_names):
+
+def generate_names(gender: str, number_of_names: int) -> List[str]:
     """
     Generate a list of Arthurian-sounding names.
 
-    name_type: one of "male" or "female"
+    gender: one of "male" or "female"
     number_of_names: how many names to generate
     """
 
@@ -20,11 +22,11 @@ def generate_names(name_type, number_of_names):
     filename = "%s_names.txt" % name_type
     filepath = os.path.join(os.path.dirname(__file__), filename)
 
-    names_by_syllable = []
+    names_by_syllable = []  # type: List[str]
     with open(filepath, 'r') as fin:
         names_by_syllable = [name.strip() for name in fin.readlines()]
 
-    syllables = []
+    syllables = []  # type: List[List[str]]
     for name in names_by_syllable:
         for index, syllable in enumerate(name.split()):
             if len(syllables) < index + 1:
@@ -32,7 +34,7 @@ def generate_names(name_type, number_of_names):
             if syllable not in syllables[index]:
                 syllables[index].append(syllable)
 
-    names = []
+    names = []  # type: List[str]
     while number_of_names > 0:
         number_of_names -= 1
         name = ""
