@@ -53,4 +53,4 @@ if __name__ == "__main__":
     if len(arguments) > 1:
         number_of_names = int(arguments[1])
     names = generate_names(name_type, number_of_names)
-    print names
+    print(names)
