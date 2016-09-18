@@ -1,6 +1,6 @@
-# -*- coding: utf-8 -*-
+from typing import List
 
-first_names = []
+first_names = []  # type: List[str]
 with open('names-raw.txt', 'r') as fin:
     for line in fin:
         name = line.split()[0]
